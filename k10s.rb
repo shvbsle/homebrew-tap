@@ -5,23 +5,23 @@
 class K10s < Formula
   desc "A modern terminal UI for Kubernetes"
   homepage "https://github.com/shvbsle/k10s"
-  version "0.1.1"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shvbsle/k10s/releases/download/v0.1.1/k10s_0.1.1_darwin_amd64.tar.gz"
-      sha256 "4cdc369147500a1e530de6747a55ef3d664aa65fd10cbd503f65fda5ce27ca57"
+      url "https://github.com/shvbsle/k10s/releases/download/v0.2.0/k10s_0.2.0_darwin_amd64.tar.gz"
+      sha256 "eb71e3942ab3395099395c53c2ea8f14217dee69b2d6c6ebc0e8784e789813f9"
 
-      def install
+      define_method(:install) do
         bin.install "k10s"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shvbsle/k10s/releases/download/v0.1.1/k10s_0.1.1_darwin_arm64.tar.gz"
-      sha256 "41f145fae04e520c8243ec99f49350d0da8f08808be83d5b9fa7033292fe01e1"
+      url "https://github.com/shvbsle/k10s/releases/download/v0.2.0/k10s_0.2.0_darwin_arm64.tar.gz"
+      sha256 "903747950b6410f082a41540e7e9969c5eee6e9db23cd06974e5dfc2eacd5303"
 
-      def install
+      define_method(:install) do
         bin.install "k10s"
       end
     end
@@ -29,16 +29,16 @@ class K10s < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shvbsle/k10s/releases/download/v0.1.1/k10s_0.1.1_linux_amd64.tar.gz"
-      sha256 "a689e819a7323a21f8f5022cce6b4580c9b8fec845bfaa2b4eb54b8461623582"
-      def install
+      url "https://github.com/shvbsle/k10s/releases/download/v0.2.0/k10s_0.2.0_linux_amd64.tar.gz"
+      sha256 "f77ee5506ce5bd8996403cf6bcfb0b2aa0f8a95a7aade593e237e1796c8cf744"
+      define_method(:install) do
         bin.install "k10s"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shvbsle/k10s/releases/download/v0.1.1/k10s_0.1.1_linux_arm64.tar.gz"
-      sha256 "8473df9bd1202ff1e98e5725fab9fc4a33d9b3ef13a312a2ad301e71372c9269"
-      def install
+      url "https://github.com/shvbsle/k10s/releases/download/v0.2.0/k10s_0.2.0_linux_arm64.tar.gz"
+      sha256 "f315ee71e4a0d974a6f6c8e1e8ab2a961e2683e8db7bdb2457159072346359c3"
+      define_method(:install) do
         bin.install "k10s"
       end
     end
