@@ -5,21 +5,21 @@
 class K10s < Formula
   desc "A modern terminal UI for Kubernetes"
   homepage "https://github.com/shvbsle/k10s"
-  version "0.3.1"
+  version "0.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shvbsle/k10s/releases/download/v0.3.1/k10s_0.3.1_darwin_amd64.tar.gz"
-      sha256 "4af3474b5fe45a75c4cb49f2a5c5cb029da5f70a829d3b4e8c9f3f0c1db55aac"
+      url "https://github.com/shvbsle/k10s/releases/download/v0.4.0/k10s_0.4.0_darwin_amd64.tar.gz"
+      sha256 "3c31a953966546865ba44680a7b1f0b22dba6449a56b7e8f6e5a737058764ec5"
 
       define_method(:install) do
         bin.install "k10s"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shvbsle/k10s/releases/download/v0.3.1/k10s_0.3.1_darwin_arm64.tar.gz"
-      sha256 "27868e67b3761d6ed38b00c4c7f5e252342b8ec14ac4f4e070758694e103ca44"
+      url "https://github.com/shvbsle/k10s/releases/download/v0.4.0/k10s_0.4.0_darwin_arm64.tar.gz"
+      sha256 "1d2eccaadf73182329cab31db536ce3233ed955d57a0b5123b97a923a44ed157"
 
       define_method(:install) do
         bin.install "k10s"
@@ -29,15 +29,15 @@ class K10s < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shvbsle/k10s/releases/download/v0.3.1/k10s_0.3.1_linux_amd64.tar.gz"
-      sha256 "9e43b36971d9984801851af6ae11934fdc9a6205b135afea30866ff945662403"
+      url "https://github.com/shvbsle/k10s/releases/download/v0.4.0/k10s_0.4.0_linux_amd64.tar.gz"
+      sha256 "67a6a325a479ebd938c828e7ca0007ef255e60b1ad7a1ce57b368ed7aa519e45"
       define_method(:install) do
         bin.install "k10s"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shvbsle/k10s/releases/download/v0.3.1/k10s_0.3.1_linux_arm64.tar.gz"
-      sha256 "ab749baa9ccecee23faef7271637f3b20e9603e05e40cc7f3ec81e57ae62e998"
+      url "https://github.com/shvbsle/k10s/releases/download/v0.4.0/k10s_0.4.0_linux_arm64.tar.gz"
+      sha256 "757ada07af95b63c193cc6f37e98bd368c01baf96b3b14df9d82a38f90b4d90c"
       define_method(:install) do
         bin.install "k10s"
       end
